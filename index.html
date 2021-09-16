@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +7,7 @@
     background-color: orangered;
     border: none;
     color: black;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -30,13 +31,28 @@
   </h2>
   <img src="one horn.png" alt="One Horn in all his glory">
   <h2>
-  <button type="button" onclick="crazy()">Click Me!</button>
+  <button type="button" onclick="crazy()" class="button">Click Me to Praise One Horn!</button>
   </h2>
   <h3 id="crazy" style="color: orangered;">Praise One Horn.</h3>
 
   <script>
+  let x = 0;
+  let table = [
+  "One Horn has been praised!",
+  "Double praise for One Horn!",
+  "Triple praise for One Horn!!",
+  "So much praise for One Horn!!",
+  "Crazy praise for One Horn!!!",
+  "The level of praise is too high!!!",
+  "Too much praise for One Horn?!?!?!?",
+  "ONE HORN HAS RETURNED"
+  ];
+  let max = table.length-1
   function crazy() {
-    document.getElementById("crazy").innerHTML = "One Horn has been praised!";
+    document.getElementById("crazy").innerHTML = table[x];
+    if (x < max) {
+      x++;
+    }
   }
   </script>
 
